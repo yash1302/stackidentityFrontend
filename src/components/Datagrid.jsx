@@ -10,7 +10,7 @@ const columns = [
     headerName: "Name",
     width: 150,
     flex: 1,
-    editable: true, 
+    editable: true,
   },
   {
     field: "Email",
@@ -51,7 +51,7 @@ const rows = [
 
 export default function Datagrid() {
   return (
-    <Box sx={{ height: 570, width: "100%" }}>
+    <Box sx={{ height: 570, width: "100%", fontWeight: "bold" }}>
       <DataGrid
         rows={rows}
         columns={columns}
