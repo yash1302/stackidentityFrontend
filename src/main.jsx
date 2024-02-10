@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoginSignupPage from "./pages/LoginSignupPage.jsx";
 import AdminPage from "./pages/AdminPage.jsx";
 import AdminGroups from "./pages/AdminGroups.jsx";
+import CreateGroupAdmin from "./pages/CreateGroupAdmin.jsx"
 
 const router = createBrowserRouter([
   {
@@ -19,10 +20,10 @@ const router = createBrowserRouter([
     path: "/adminGroup",
     element: <AdminGroups />,
   },
-  // {
-  //   path: "/createGroup",
-  //   element: <CreateGroupAdmin/>,
-  // },
+  {
+    path: "/createGroup",
+    element: <CreateGroupAdmin/>,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -51,7 +51,7 @@ const rows = [
 
 export default function Datagrid() {
   return (
-    <Box sx={{ height: 570, width: "100%", fontWeight: "bold" }}>
+    <Box sx={{ height: "570px", width: "100%", fontWeight: "bold" }}>
       <DataGrid
         rows={rows}
         columns={columns}

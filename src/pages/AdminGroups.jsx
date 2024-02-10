@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
 import { data } from "../data.js";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const columns = [
   { field: "id", headerName: "id", width: 90 },
@@ -39,7 +40,7 @@ export default function AdminGroups() {
           <Button variant="contained" size="small" style={{ padding: 10 }}>
             Delete
           </Button>
-          <Button variant="contained" size="small">
+          <Button component={Link} to="/createGroup" variant="contained" size="small">
             Create Group
           </Button>
         </div>
