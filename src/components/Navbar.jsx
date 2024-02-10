@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <div>
       <nav className="w-full h-16 bg-[#84B5FF] flex items-center justify-end gap-x-14">

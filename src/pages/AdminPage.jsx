@@ -1,41 +1,58 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import { styled } from "@mui/material/styles";
-import Paper from "@mui/material/Paper";
-import Datagrid from "../components/Datagrid";
+import { DataGrid } from "@mui/x-data-grid";
+import Button from "@mui/material/Button";
+import {data} from "../data.js"
 
-const info = [
+const columns = [
+  { field: "id", headerName: "ID", width: 90 },
   {
-    name: "yash",
-    email: "yash@gmail.com",
+    field: "Name",
+    headerName: "Name",
+    width: 150,
+    flex: 1,
+    editable: true,
   },
   {
-    name: "yash",
-    email: "yash@gmail.com",
+    field: "Email",
+    headerName: "Email",
+    width: 150,
+    flex: 1,
+    editable: true,
   },
   {
-    name: "yash",
-    email: "yash@gmail.com",
-  },
-  {
-    name: "yash",
-    email: "yash@gmail.com",
+    field: "Profile",
+    headerName: "Profile",
+    renderCell: () => (
+      <strong>
+        <Button variant="contained" size="small" style={{ marginLeft: 16 }}>
+          Contained
+        </Button>
+      </strong>
+    ),
+    flex: 0.5,
   },
 ];
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
 
 export default function AdminPage() {
   return (
     <div>
       <Navbar />
-      <Datagrid />
+      <div style={{ height: 550, width: '100%'}}>
+        <DataGrid
+          rows={data}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: {
+                pageSize: 8,
+              },
+            },
+          }}
+          pageSizeOptions={[5]}
+          checkboxSelection
+        />
+      </div>
     </div>
   );
 }
