@@ -2,18 +2,6 @@ import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function LoginSignup() {
-  // const [posts, setPosts] = useState([]);
-   useEffect(() => {
-      fetch('https://3a05-2405-201-1012-1d39-3cb-882a-6596-faaa.ngrok-free.app/api/user/login')
-         .then((response) => response.json())
-         .then((data) => {
-            console.log(data);
-            setPosts(data);
-         })
-         .catch((err) => {
-            console.log(err.message);
-         });
-   }, []);
 
   return (
     <div className="flex gap-[2.25rem] bg-gray-200 justify-between w-full h-screen">

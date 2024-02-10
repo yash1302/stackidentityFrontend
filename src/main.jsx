@@ -8,6 +8,7 @@ import AdminGroups from "./pages/AdminGroups.jsx";
 import CreateGroupAdmin from "./pages/CreateGroupAdmin.jsx"
 
 const router = createBrowserRouter([
+  
   {
     path: "/",
     element: <LoginSignupPage />,
