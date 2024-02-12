@@ -15,6 +15,8 @@ export default function Navbar(props) {
           Requests
         </Button>
         <Button
+          component={Link}
+          to = "/adminPolicies"
           variant="contained"
           size="small"
           style={{ padding: 10, backgroundColor: "#FFD7D7", color: "black" }}
