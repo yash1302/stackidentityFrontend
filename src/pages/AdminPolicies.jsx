@@ -10,8 +10,8 @@ import { Link } from "react-router-dom";
 const columns = [
     { field: "id", headerName: "id", width: 90 },
     {
-      field: "GroupName",
-      headerName: "Group Name",
+      field: "PolicyName",
+      headerName: "Policy Name",
       width: 150,
       flex: 1,
       editable: true,

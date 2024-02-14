@@ -2,7 +2,8 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { DataGrid } from "@mui/x-data-grid";
 import Button from "@mui/material/Button";
-import {data} from "../data.js"
+import { data } from "../data.js";
+import { Link } from "react-router-dom";
 
 const columns = [
   { field: "id", headerName: "ID", width: 90 },
@@ -25,8 +26,14 @@ const columns = [
     headerName: "Profile",
     renderCell: () => (
       <strong>
-        <Button variant="contained" size="small" style={{ marginLeft: 16 }}>
-          Contained
+        <Button
+          component={Link}
+          to="/viewUserGroup"
+          variant="contained"
+          size="small"
+          style={{ marginLeft: 16 }}
+        >
+          Profile
         </Button>
       </strong>
     ),
@@ -34,11 +41,13 @@ const columns = [
   },
 ];
 
+const rows = [];
+
 export default function AdminPage() {
   return (
     <div>
       <Navbar />
-      <div style={{ height: 550, width: '100%'}}>
+      <div style={{ height: 550, width: "100%" }}>
         <DataGrid
           rows={data}
           columns={columns}
