@@ -7,12 +7,17 @@ import AdminPage from "./pages/AdminPage.jsx";
 import AdminGroups from "./pages/AdminGroups.jsx";
 import CreateGroupAdmin from "./pages/CreateGroupAdmin.jsx"
 import AdminPolicies from "./pages/AdminPolicies.jsx";
+import SignupPage from "./pages/SignupPage.jsx";
 
 const router = createBrowserRouter([
   
   {
     path: "/",
     element: <LoginSignupPage />,
+  },
+  {
+    path:"/SignupPage",
+    element: <SignupPage/>
   },
   {
     path: "/admindashboard",
