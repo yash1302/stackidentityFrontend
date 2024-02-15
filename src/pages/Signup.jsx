@@ -72,10 +72,10 @@ export default function Signup() {
             <ToastContainer />
 
             <div className="flex mt-[30px] gap-x-8">
-              <button className="bg-[#2D67BF] w-[100px] text-white rounded-xl p-2 hover:bg-[#082146]">
+              <button className="bg-[#2D67BF] w-[100px] text-white rounded-xl p-2 active:bg-[#082146]">
                 user
               </button>
-              <button className="bg-[#2D67BF] w-[100px] text-white rounded-xl p-2 hover:bg-[#082146]">
+              <button className="bg-[#2D67BF] w-[100px] text-white rounded-xl p-2 active:bg-[#082146]">
                 Admin
               </button>
             </div>

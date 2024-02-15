@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 
 export default function LoginSignup() {
   const [btnColor, setBtnColor] = useState(true);
-
+  const [type, setType] = useState("");
+  // const [admin, setAdmin] = useState(true);
+  // console.log(user);
   return (
     <div className="flex gap-[2.25rem] bg-gray-200 justify-between w-full h-screen">
       <div className="flex items-center ml-[200px]">
@@ -30,7 +32,7 @@ export default function LoginSignup() {
             <button>Signup</button>
           </Link>
           <Link
-            to="/admindashboard"
+            to={type == "admin" ? "/admindashboard" : "/UserGroup"}
             className="mt-[20px] w-[80%] bg-[#2D67BF] text-white rounded-xl p-2 hover:bg-[#082146] text-center "
           >
             <button>Login</button>
@@ -44,18 +46,31 @@ export default function LoginSignup() {
             Forgot Password?
           </button>
           <div className="flex mt-[20px] gap-x-8">
-            <button
-              onClick={() => {
-                setBtnColor(!btnColor);
-              }}
-              style={{ background: btnColor ? "#2D67BF" : "#082146" }}
-              className="bg-[#2D67BF] w-[100px] text-white rounded-xl p-2 hover:bg-[#082146]"
-            >
-              user
-            </button>
-            <button className="bg-[#2D67BF] w-[100px] text-white rounded-xl p-2 hover:bg-[#082146]">
-              Admin
-            </button>
+            <Link>
+              <button
+                onClick={() => {
+                  setBtnColor(!btnColor);
+                  setType("user");
+                  // console.log(user);
+                }}
+                style={{ background: type == "user" ? "#082146" : "#2D67BF" }}
+                className="bg-[#2D67BF] w-[100px] text-white rounded-xl p-2"
+              >
+                user
+              </button>
+            </Link>
+            <Link>
+              <button
+                onClick={() => {
+                  setType("admin");
+                  // console.log(admin);
+                }}
+                style={{ background: type == "admin" ? "#082146" : "#2D67BF" }}
+                className="bg-[#2D67BF] w-[100px] text-white rounded-xl p-2"
+              >
+                Admin
+              </button>
+            </Link>
           </div>
         </form>
       </div>

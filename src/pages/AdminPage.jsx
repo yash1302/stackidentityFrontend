@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import { DataGrid } from "@mui/x-data-grid";
 import Button from "@mui/material/Button";
 import { data } from "../data.js";
 import { Link } from "react-router-dom";
+import NavbarAdmin from "../components/NavbarAdmin.jsx";
 
 const columns = [
   { field: "id", headerName: "ID", width: 90 },
@@ -46,7 +46,7 @@ const rows = [];
 export default function AdminPage() {
   return (
     <div>
-      <Navbar />
+      <NavbarAdmin/>
       <div style={{ height: 550, width: "100%" }}>
         <DataGrid
           rows={data}

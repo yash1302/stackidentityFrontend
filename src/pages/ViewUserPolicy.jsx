@@ -2,35 +2,28 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
-import { data } from "../data.js";
 import { Button } from "@mui/material";
+import { data } from "../data.js";
 
 const columns = [
   { field: "id", headerName: "id", width: 90 },
   {
-    field: "GroupName",
-    headerName: "Group Name",
+    field: "PolicyName",
+    headerName: "Policy Name",
     width: 150,
     flex: 1,
     editable: true,
   },
   {
-    field: "PoliciesAttached",
-    headerName: "Policies Attached",
-    width: 150,
-    flex: 1,
-    editable: true,
-  },
-  {
-    field: "NumberUsers",
-    headerName: "Number of Users",
+    field: "PoliciesAttachedToGroups",
+    headerName: "Policies Attached to groups",
     width: 150,
     flex: 1,
     editable: true,
   },
 ];
 
-export default function ViewUserGroups() {
+export default function ViewUserPolicy() {
   return (
     <div>
       <Navbar />
