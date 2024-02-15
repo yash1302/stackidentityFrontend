@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
 import { data } from "../data.js";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import NavbarAdmin from "../components/NavbarAdmin.jsx";
 
 const columns = [
   { field: "id", headerName: "id", width: 90 },
@@ -31,16 +31,19 @@ export default function AdminGroups() {
 
   return (
     <div>
-      <Navbar />
+      <NavbarAdmin />
       <div className="flex justify-between">
         <div className="my-4 mx-[68px] text-3xl">
-          <h1>User Groups</h1>
+          <h1>Groups</h1>
         </div>
         <div className="my-8 flex gap-20 mx-12">
-          <Button variant="contained" size="small" style={{ padding: 10 }}>
-            Delete
-          </Button>
-          <Button component={Link} to="/createGroup" variant="contained" size="small">
+          <Button
+            component={Link}
+            to="/createGroup"
+            variant="contained"
+            size="small"
+            style={{ padding: "10px" }}
+          >
             Create Group
           </Button>
         </div>
@@ -64,7 +67,9 @@ export default function AdminGroups() {
       >
         <DataGrid
           rows={data.filter((item) => {
-            return search.toLowerCase === '' ? item : item.GroupName.toLowerCase().includes(search);
+            return search.toLowerCase === ""
+              ? item
+              : item.GroupName.toLowerCase().includes(search);
           })}
           columns={columns}
           initialState={{

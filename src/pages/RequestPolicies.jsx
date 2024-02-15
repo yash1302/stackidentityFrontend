@@ -1,25 +1,16 @@
+import UserNavbar from "../components/UserNavbar";
 import React from "react";
-import Navbar from "../components/Navbar";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
 import { data } from "../data.js";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import NavbarAdmin from "../components/NavbarAdmin.jsx";
 
 const columns = [
   { field: "id", headerName: "id", width: 90 },
   {
-    field: "PolicyName",
+    field: "GroupName",
     headerName: "Policy Name",
-    width: 150,
-    flex: 1,
-    editable: true,
-  },
-  {
-    field: "Type",
-    headerName: "Type",
     width: 150,
     flex: 1,
     editable: true,
@@ -33,25 +24,18 @@ const columns = [
   },
 ];
 
-export default function AdminPolicies() {
+export default function RequestPolicies() {
   const [search, setsearch] = useState("");
-  console.log(search);
   return (
     <div>
-      <NavbarAdmin />
+      <UserNavbar />
       <div className="flex justify-between">
         <div className="my-4 mx-[68px] text-3xl">
-          <h1>Policies</h1>
+          <h1>Avaliable Policies</h1>
         </div>
         <div className="my-8 flex gap-20 mx-12">
-          
-          <Button
-            component={Link}
-            to="/createPolicy"
-            variant="contained"
-            size="small"
-          >
-            Create Policies
+          <Button variant="contained" size="small" style={{ padding: "10px" }}>
+            Request
           </Button>
         </div>
       </div>
