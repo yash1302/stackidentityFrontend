@@ -26,7 +26,11 @@ export default function LoginSignup() {
             placeholder="Password"
           />
           <Link
+<<<<<<< HEAD
+            to="/SignupPage"
+=======
             to="/Signup"
+>>>>>>> 839f2229f97016d49793c833582d3453e4c3ff90
             className="mt-[20px] w-[80%] bg-[#2D67BF] text-white rounded-xl p-2 hover:bg-[#082146] text-center "
           >
             <button>Signup</button>

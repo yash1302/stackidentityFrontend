@@ -7,6 +7,7 @@ import AdminPage from "./pages/AdminPage.jsx";
 import AdminGroups from "./pages/AdminGroups.jsx";
 import CreateGroupAdmin from "./pages/CreateGroupAdmin.jsx";
 import AdminPolicies from "./pages/AdminPolicies.jsx";
+import SignupPage from "./pages/SignupPage.jsx";
 import Signup from "./pages/Signup.jsx";
 import ViewUserGroups from "./pages/ViewUserGroups.jsx";
 import ViewUserPolicy from "./pages/ViewUserPolicy.jsx";
@@ -18,15 +19,21 @@ import RequestGroups from "./pages/RequestGroups.jsx";
 import UserPolicies from "./pages/UserPolicies.jsx";
 import RequestPolicies from "./pages/RequestPolicies.jsx";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <LoginSignupPage />,
   },
   {
+    path:"/SignupPage",
+    element: <SignupPage/>
+  },
+  {
     path: "/Signup",
     element: <Signup />,
   },
+
 
   {
     path: "/admindashboard",
@@ -86,4 +93,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>
-);
+)
