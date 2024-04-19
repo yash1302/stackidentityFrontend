@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { Button } from "@mui/material";
 import Navbar from "../components/Navbar";
+import NavbarAdmin from "../components/NavbarAdmin";
 
 export default function CreateGroupAdmin() {
   const [searchUser, setSearchUser] = useState('');
@@ -57,7 +58,7 @@ export default function CreateGroupAdmin() {
 
   return (
     <div>
-      <Navbar />
+      <NavbarAdmin />
       <div className="h-screen w-full flex-col ml-[14px] justify-center">
         <div className="border-2 flex flex-col border-black h-[285px] w-[98%] my-5">
           <div className="ml-[50px] mt-[23px] text-3xl  border-stone-400 border-b-2 w-[270px]">
@@ -69,7 +70,7 @@ export default function CreateGroupAdmin() {
           <div>
             <input
               type="text"
-              className="text-xl text-center w-[844px] h-[45px] border-2 ml-[50px] mt-[40px] p-2 border-stone-700"
+              className="text-xl text-center w-[844px] h-[45px] border-2 ml-[50px] mt-[40px] p-2 border-stone-700 rounded-lg"
               placeholder="Group Name"
             />
           </div>
@@ -83,7 +84,7 @@ export default function CreateGroupAdmin() {
               <input
                 type="text"
                 placeholder="Search"
-                className="text-xl text-center w-[437px] mt-[23px] h-[45px] border-2 ml-[500px] p-2 border-stone-700"
+                className="text-xl text-center w-[437px] mt-[23px] h-[45px] border-2 ml-[500px] p-2 border-stone-700 rounded-lg"
                 onChange={(e) => {
                   setSearchUser(e.target.value.toLowerCase())
                   // console.log(search)
@@ -119,7 +120,7 @@ export default function CreateGroupAdmin() {
               <input
                 type="text"
                 placeholder="Search"
-                className="text-xl text-center w-[437px] mt-[23px] h-[45px] border-2 ml-[500px] p-2 border-stone-700"
+                className="text-xl text-center w-[437px] mt-[23px] h-[45px] border-2 ml-[500px] p-2 border-stone-700 rounded-lg"
                 onChange={(e)=>setSearchPolicy(e.target.value.toLowerCase())}
               />
             </div>
